@@ -3,10 +3,25 @@
 // Here's how the app works:
 
 // There will be four crystals displayed as buttons on the page.
+// Tucker - This is done in the HTML so nothing we have to do on our end.
 
 // The player will be shown a random number at the start of the game.
+// Tucker - done at line 45 - PERFECT!
 
 // When the player clicks on a crystal, it will add a specific amount of points to the player's total score.
+// Tucker - I see your for loop at lines 51 - 55 which is awesome, but how are we actually going to get those 
+// values associated with the images them selves?
+// A - So just like everything in code. There is multiple ways to do this. I will show you one way.
+// I added a class of "planet" to each img so that I can easily access them with jQuery
+
+// Select all elements with a class of planet
+$(".planet").each(function(){
+    // for each element I find I am going to use jQuerys each method to run a function on each
+    // generate a random number
+    var random = Math.floor(Math.random() * 11) + 1;
+    // store that random number in the data-value attribute
+    $(this).attr("data-value", random);
+});
 
 // Your game will hide this amount until the player clicks a crystal.
 // When they do click one, update the player's score counter.
@@ -45,23 +60,29 @@ $(document).ready(function () {
 
 // create a loop generating random numbers between 1- 12 for each planet
 // Q- how do I assign it to the planet images? I tried copying the code from above that's generating the random number and my planet images disappeared
+// A - I answered this question on lines 12 - 24
     for (var i = 0; i < 4; i++) {
         var random = Math.floor(Math.random() * 11) + 1;
         
         console.log(random);
     }
 });
+
 // Create an onclick event & turn HTML elements into integers, then add to score (HTML id #score03)
 // Q This generates an error in my console & i'm not sure how to proprly set this up
-$(".planet-images").on("click", function () {
+// A - A big reason this would cause an error for you is because that attribute you were trying to select didnt exist.
+// Also, selecting the the container would trigger the same functionality no matter what img you clicked on (since the wrapper wraps all of them)
 
-    var planetValue = ($(this).attr("data-crystalvalue"));
+// I changed your selector to only select the images themselves
+$(".planet").on("click", function () {
+    // grab the value from the attribute we created on line 21
+    var planetValue = ($(this).attr("data-value"));
 
     planetValue = parseInt(planetValue);
 
 //  Every click, from every planet adds to the global counter. Add up the value of each planet to the score card
-    
-    
+    // I like the idea, but where are you actually adding the values? 
+
     $("#score03").html(randomNumber);
     
     console.log(randomNumber);
@@ -75,10 +96,6 @@ $(".planet-images").on("click", function () {
         console.log("you lost");
         losses++;
     }
-
-
-
-
 });
 
 
@@ -107,6 +124,9 @@ $(".planet-images").on("click", function () {
 //         console.log("You win!");
 //     }
 
+//     else if (counter >= targetNumber) {
+//         losses++;
+//         console.log("You lose!!");
 //     else if (counter >= targetNumber) {
 //         losses++;
 //         console.log("You lose!!");
