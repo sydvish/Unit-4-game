@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- <link rel="reset" href=""css/reset.css"> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> -->
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
+
+    <title>Unit-4-Game</title>
+</head>
+
+<body>
+
+    <!-- Here is where we will put our CSS elenents -->
+
+    <div class="container">
+        <h1>Planet Collector!</h1>
+    </div>
+
+    <div id="instructions">
+        <p>You will be given a random number at the start of the game</p>
+        <p>There are four planets below. By clicking on a planet you will add a spacific amount of points to your total
+            score</p>
+        <p>You win the game by matching your total score to the random number, you lose the game if your total score
+            goes above the random number</p>
+        <p>The value of each planet is hidden from you until you click on it</p>
+        <p>Each time the game restarts, the value of the planets change</p>
+    </div>
+
+    <!-- <div id="container">
+        <div class="row">
+            <div class=".col-sm-6">
+                This is where the number value will go
+            </div>
+            <div class=".col-sm-6">
+                This is where the player will view wins or losses
+            </div>
+        </div> -->
+
+    <div id="number-value">
+        <p>45</p>
+    </div>
+
+    <div id="score">
+        <p>Wins : 0</p>
+        <p>Losses : 0</p>
+    </div>
+
+
+    <div class="planet-images">
+        
+        <input type="image" src="assets/images/earth.jpeg" width=200px height=150px name="Earth" class="btTxt submit" />
+        <input type="image" src="assets/images/Mars.jpeg" width=200px height=150px name="Mars"/>
+        <input type="image" src="assets/images/Saturn.jpeg" width=200px height=150px name="Saturn"/>
+        <input type="image" src="assets/images/Jupiter.jpeg" width=200px height=150px name="Jupiter"/>
+
+        <!-- <img src="assets/images/Earth.jpeg" width=200px height=150px alt="Earth"> -->
+        <!-- <img src="assets/images/Mars.jpeg" width=200px height=150px alt="Mars">
+        <img src="assets/images/Saturn.jpeg" width=200px height=150px alt="Saturn">
+        <img src="assets/images/Jupiter.jpeg" width=200px height=150px alt="Jupiter"> -->
+    </div>
+
+
+    <div id="score02">
+        <p>Your total score is:</p>
+    </div>
+
+    <div id="score03">
+        <p>0</p>
+    </div>
+
+
+
+
+
+
+
+    <script src="assets/javascript/game.js"></script>
+</body>
+
+</html>

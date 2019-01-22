@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>simple crystal game</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
+
+</head>
+
+<body>
+  <div class="container">
+    <h1>Planet Collector!</h1>
+  </div>
+
+  <div id="instructions">
+    <p>You will be given a random number at the start of the game</p>
+    <p>There are four planets below. By clicking on a planet you will add a spacific amount of points to your total
+      score</p>
+    <p>You win the game by matching your total score to the random number, you lose the game if your total score
+      goes above the random number</p>
+    <p>The value of each planet is hidden from you until you click on it</p>
+    <p>Each time the game restarts, the value of the planets change</p>
+  </div>
+
+  <div id="number-value">
+    <p>45</p>
+  </div>
+
+  <div id="score">
+    <p>Wins : 0</p>
+    <p>Losses : 0</p>
+  </div>
+
+
+  <div class="planet-images">
+    <input type="image" src="assets/images/earth.jpeg" width=200px height=150px name="Earth" class="btTxt submit" />
+    <input type="image" src="assets/images/Mars.jpeg" width=200px height=150px name="Mars" />
+    <input type="image" src="assets/images/Saturn.jpeg" width=200px height=150px name="Saturn" />
+    <input type="image" src="assets/images/Jupiter.jpeg" width=200px height=150px name="Jupiter" />
+  </div>
+
+  <div id="score02">
+    <p>Your total score is:</p>
+  </div>
+
+  <div id="score03">
+    <p>0</p>
+  </div>
+
+
+
+
+  <script src="assets/javascript/game02.js"></script>
+
+</body>
+
+</html>
