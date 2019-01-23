@@ -32,37 +32,25 @@
         <p>Each time the game restarts, the value of the planets change</p>
     </div>
 
-    <!-- <div id="container">
-        <div class="row">
-            <div class=".col-sm-6">
-                This is where the number value will go
-            </div>
-            <div class=".col-sm-6">
-                This is where the player will view wins or losses
-            </div>
-        </div> -->
+
 
     <div id="number-value">
         <p>45</p>
     </div>
 
     <div id="score">
-        <p>Wins : 0</p>
-        <p>Losses : 0</p>
+        <p>Wins : <span id="wins">0</span></p>
+        <p>Losses : <span id="losses">0</span></p>
     </div>
 
 
     <div class="planet-images">
-        
-        <input class="planet" type="image" src="assets/images/earth.jpeg" width=200px height=150px name="Earth" class="btTxt submit" />
-        <input class="planet" type="image" src="assets/images/Mars.jpeg" width=200px height=150px name="Mars"/>
-        <input class="planet" type="image" src="assets/images/Saturn.jpeg" width=200px height=150px name="Saturn"/>
-        <input class="planet" type="image" src="assets/images/Jupiter.jpeg" width=200px height=150px name="Jupiter"/>
 
-        <!-- <img src="assets/images/Earth.jpeg" width=200px height=150px alt="Earth"> -->
-        <!-- <img src="assets/images/Mars.jpeg" width=200px height=150px alt="Mars">
-        <img src="assets/images/Saturn.jpeg" width=200px height=150px alt="Saturn">
-        <img src="assets/images/Jupiter.jpeg" width=200px height=150px alt="Jupiter"> -->
+        <input type="image" src="assets/images/earth.jpeg" width=200px height=150px name="Earth" class="btTxt submit planet" />
+        <input type="image" src="assets/images/Mars.jpeg" width=200px height=150px name="Mars" class="planet"/>
+        <input type="image" src="assets/images/Saturn.jpeg" width=200px height=150px name="Saturn" class="planet"/>
+        <input type="image" src="assets/images/Jupiter.jpeg" width=200px height=150px name="Jupiter" class="planet"/>
+
     </div>
 
 
@@ -71,7 +59,7 @@
     </div>
 
     <div id="score03">
-        <p>0</p>
+        <p id="score03">0</p>
     </div>
 
 
